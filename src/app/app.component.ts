@@ -19,6 +19,7 @@ export class AppComponent implements OnInit {
       {
         label: 'Home',
         icon: 'pi pi-home',
+        routerLink: 'welcome',
       },
       {
         label: 'Features',
