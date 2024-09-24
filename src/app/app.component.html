@@ -17,6 +17,11 @@
       </ng-template>
     </p-menubar>
   </div>
+  @if (bredItems$ | async; as bredItems) {
+  <div class="card">
+    <p-breadcrumb class="max-w-full" [model]="bredItems" [home]="home" />
+  </div>
+  }
 </header>
 <main>
   <router-outlet></router-outlet>
