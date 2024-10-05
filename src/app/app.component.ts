@@ -26,19 +26,19 @@ export class AppComponent implements OnInit, AfterViewInit {
   user$ = this.userService.user$;
 
   ngOnInit(): void {
-    // this.breadItems = [
-    //   { label: 'Electronics' },
-    //   { label: 'Computer' },
-    //   { label: 'Accessories' },
-    //   { label: 'Keyboard' },
-    //   { label: 'Wireless' },
-    // ];
+    this.breadItems = [
+      { label: 'Electronics' },
+      { label: 'Computer' },
+      { label: 'Accessories' },
+      { label: 'Keyboard' },
+      { label: 'Wireless' },
+    ];
 
     this.items = [
       {
         label: 'Home',
         icon: 'pi pi-home',
-        routerLink: 'welcome',
+        routerLink: 'home',
       },
       {
         label: 'Features',

@@ -75,7 +75,7 @@ picture {
 
 /* Uttility classes */
 .container {
-  width: min(90%, 100% - 2rem);
+  width: min(95%, 100% - 2rem);
   margin-inline: auto;
 }
 
@@ -110,4 +110,9 @@ app-root {
 
 main {
   flex: 1 0 auto;
+}
+
+/* customize breadcrumb style  */
+.p-breadcrumb {
+  padding: 1rem 1.7rem;
 }
