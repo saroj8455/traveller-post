@@ -100,3 +100,14 @@ article {
 p {
   font-size: var(--fs-400);
 }
+
+/* position the footer bottom of the page  */
+app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+main {
+  flex: 1 0 auto;
+}
