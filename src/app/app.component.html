@@ -3,16 +3,24 @@
     <p-menubar [model]="items">
       <ng-template pTemplate="end">
         <div class="flex align-items-center gap-2">
-          <input
+          <!-- <input
             type="text"
             pInputText
             placeholder="Search"
             class="w-8rem sm:w-auto"
-          />
-          <p-avatar
-            image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png"
-            shape="circle"
-          />
+          /> -->
+          <div class="flex align-items-center gap-2 justify-content-center">
+            <p-avatar
+              image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png"
+              shape="circle"
+              class="mt-2"
+            />
+            <ng-container>
+              @if (user$ | async; as user) {
+              <div class="text-1xl text-500">{{ user.profile }}</div>
+              }
+            </ng-container>
+          </div>
         </div>
       </ng-template>
     </p-menubar>
@@ -39,7 +47,7 @@
           height="40"
         />
         <div class="mt-2 line-height-3">
-          © 2021 Bastion, Inc. All rights reserved
+          © 2024 Bastion, Inc. All rights reserved
         </div>
       </div>
       <div class="mt-3 sm:mt-0">

@@ -5,6 +5,7 @@ import { routes } from './app.routes';
 import { provideHttpClient } from '@angular/common/http';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { ReactiveFormsModule } from '@angular/forms';
+import { authGuard } from './auth.guard';
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes),

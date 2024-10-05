@@ -4,6 +4,7 @@ import { ConfigPrimeModule } from './config-prime/config-prime.module';
 import { MenuItem } from 'primeng/api';
 import { CommonService } from './services/common.service';
 import { AsyncPipe, JsonPipe } from '@angular/common';
+import { UserService } from './services/user.service';
 
 @Component({
   selector: 'app-root',
@@ -17,9 +18,12 @@ export class AppComponent implements OnInit, AfterViewInit {
   items: MenuItem[] = [];
 
   private commonService = inject(CommonService);
+  private userService = inject(UserService);
   bredItems$ = this.commonService.breadItems$;
   breadItems: MenuItem[] = [];
   home: MenuItem = { icon: 'pi pi-home', routerLink: '/' };
+
+  user$ = this.userService.user$;
 
   ngOnInit(): void {
     // this.breadItems = [
