@@ -4,5 +4,24 @@
     <div class="card flex justify-content-center">
       <p-button label="Check" icon="pi pi-check"></p-button>
     </div>
+    <div class="card pt-5">
+      <div class="dropdown" appMultiSelectDropdown [options]="dropdownOptions">
+        <div class="dropdown-toggle">Select Options</div>
+        <div class="dropdown-list">
+          <ul>
+            <li
+              *ngFor="let option of dropdownOptions"
+              (click)="toggleOption(option)"
+            >
+              <input
+                type="checkbox"
+                [checked]="selectedOptions.includes(option)"
+              />
+              {{ option.label }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
