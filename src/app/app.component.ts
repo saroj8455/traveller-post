@@ -43,14 +43,17 @@ export class AppComponent implements OnInit, AfterViewInit {
       {
         label: 'Features',
         icon: 'pi pi-star',
+        routerLink: 'about',
       },
       {
         label: 'Projects',
         icon: 'pi pi-search',
+        routerLink: 'posts',
       },
       {
         label: 'Contact',
         icon: 'pi pi-envelope',
+        routerLink: 'contact',
       },
     ];
   }
